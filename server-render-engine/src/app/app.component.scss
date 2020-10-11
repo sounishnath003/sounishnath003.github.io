@@ -1,0 +1,51 @@
+@import url('../tailwind.css');
+* {
+  margin: 0;
+  padding: 0;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+tr {
+  text-align: center;
+  padding: 10px;
+}
+
+tr {
+  margin-bottom: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+.center {
+  margin: auto;
+  margin-top: 12px;
+  text-align: center;
+  margin-bottom: 30px;
+
+  .title {
+    font-size: 1.4em;
+  }
+  .sub-grp {
+    margin: auto;
+    margin-top: 10px;
+
+    p {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-size: 1.22em;
+      font-weight: bold;
+    }
+  }
+}

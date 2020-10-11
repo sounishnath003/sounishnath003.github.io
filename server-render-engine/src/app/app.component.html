@@ -1,0 +1,134 @@
+<div>
+  <div class="m-3">
+    <div
+      class="inline-block mx-auto mr-4 px-4 py-3 rounded bg-red-600 text-white"
+    >
+      <button (click)="feedData()">Feed Data</button>
+    </div>
+    <button
+      class="border bg-blue-100 px-4 py-3 rounded"
+      (click)="convertPDF('html-pdf')"
+    >
+      Download PDF
+    </button>
+  </div>
+
+  <div id="html-pdf">
+    <div class="max-w-4xl m-auto mx-auto">
+      <div class="center">
+        <h3 class="title">
+          Serial No. or the stock Statement MANANI ANNEXURE-15
+        </h3>
+        <div class="sub-grp">
+          <p>CASH CREDIT ACCOUNT with STATE BANK OF INDIA GHATAL BRANCH</p>
+          <span>
+            STATEMENT OF ASSETS / STOCKS HYPOTHDCATED AS NO …… ……… ……
+            …..………</span
+          >
+        </div>
+      </div>
+
+      <div class="mt-16">
+        <table style="width: 100%">
+          <tr>
+            <th>SL. No</th>
+            <th>Particulars of goods hypothecated</th>
+            <th>Quantity (pics)</th>
+            <th>Rate (INR)</th>
+            <th>Value (INR)</th>
+          </tr>
+          <tr
+            *ngFor="let product of products; let i = index"
+            [attr.data-index]="i"
+          >
+            <td>{{ i + 1 }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>{{ product.rate | currency: "INR" }}</td>
+            <td>
+              {{
+                calculateTotal(product.quantity, product.rate) | currency: "INR"
+              }}
+            </td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Cosmetics</td>
+            <td>-</td>
+            <td>-</td>
+            <td>{{ costCosmetics | currency: "INR" }}</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>Others Items</td>
+            <td>-</td>
+            <td>-</td>
+            <td>{{ costOthers | currency: "INR" }}</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="mt-12 text-xl font-bold text-right">
+        <div class="m-2">
+          <span>Total Value: ----- {{ totalValue | currency: "INR" }} </span>
+        </div>
+        <div class="m-2">
+          <span
+            >Less Margin as per agreement @ 10%: -----
+            {{ totalValue * 0.1 | currency: "INR" }}
+          </span>
+        </div>
+        <div class="m-2">
+          <span
+            >Net Drawing Power: ----- {{ totalValue * 0.9 | currency: "INR" }}
+          </span>
+        </div>
+      </div>
+
+      <div class="mt-16">
+        <p class="font-bold">I/We certify that</p>
+        <div class="mt-4">
+          <ol>
+            <li class="font-bol m-2">
+              i) The assets detailed above are my/our exclusive properly and no
+              other person has any interest & no other person has any interest
+              lies or charge thereon.
+            </li>
+            <li class="font-bol m-2">
+              ii) The quantity of raw materials goods an process and finished
+              goods shown above represent the true and accurate stocking
+              pollution obtaining indicated truly the voice rate with the shop.
+            </li>
+            <li class="font-bol m-2">
+              iii) The rates are which have been indicated above the truly
+              reflect voice rate or the contract rates or the controlled rate
+              whichever the lowest.
+            </li>
+            <li class="font-bol m-2">
+              iv) The assets detailed above an insured for the full market value
+              and relative the insurances policies are in force and held by us.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <div class="flex mt-8 flex-row justify-between">
+          <div class="m-auto">
+            <div class="font-bold">Date: {{ today | date }}</div>
+          </div>
+          <div class="m-auto">
+            <div class="flex flex-col m-auto text-center justify-evenly">
+              <div class="mb-6"></div>
+              <span>-----------------------------------------</span>
+              <div class="font-bold">
+                <div>SIGNATURE</div>
+                <div>Account: 33484359688</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
