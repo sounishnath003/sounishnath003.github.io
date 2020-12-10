@@ -21,32 +21,32 @@ export class ProductGeneratorService {
   private products: Product[] = [
     {
       name: 'Saree',
-      quantity: this.generateRandom(60, 120),
+      quantity: this.generateRandom(100, 130),
       rate: 800,
     },
     {
       name: '-DO-',
-      quantity: this.generateRandom(60, 110),
+      quantity: this.generateRandom(90, 120),
       rate: 1700,
     },
     {
       name: 'Churidar Pic',
-      quantity: this.generateRandom(46, 98),
+      quantity: this.generateRandom(72, 110),
       rate: 1545,
     },
     {
       name: 'Fancy Saree',
-      quantity: this.generateRandom(65, 86),
+      quantity: this.generateRandom(90, 110),
       rate: 1822,
     },
     {
       name: 'Churidar',
-      quantity: this.generateRandom(70, 100),
-      rate: 1800,
+      quantity: this.generateRandom(85, 140),
+      rate: 1700,
     },
     {
       name: 'Jeans',
-      quantity: this.generateRandom(38, 50),
+      quantity: this.generateRandom(50, 90),
       rate: 1660,
     },
     {
@@ -56,28 +56,28 @@ export class ProductGeneratorService {
     },
     {
       name: 'Bed Sheets',
-      quantity: this.generateRandom(5, 11),
+      quantity: this.generateRandom(10, 18),
       rate: 1200,
     },
     {
       name: 'Sweaters',
-      quantity: this.generateRandom(8, 24),
-      rate: 850,
+      quantity: this.generateRandom(40, 62),
+      rate: 920,
     },
     {
       name: 'Silk Saree',
-      quantity: this.generateRandom(40, 68),
-      rate: 2200,
+      quantity: this.generateRandom(52, 78),
+      rate: 2600,
     },
     {
       name: 'Blankets',
-      quantity: this.generateRandom(4, 9),
-      rate: 2000,
+      quantity: this.generateRandom(8, 18),
+      rate: 24370,
     },
     {
       name: 'Winter Garments',
-      quantity: this.generateRandom(3, 20),
-      rate: 760,
+      quantity: this.generateRandom(13, 28),
+      rate: 780,
     },
   ];
 
