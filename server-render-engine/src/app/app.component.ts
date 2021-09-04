@@ -1,8 +1,8 @@
+import { Component, OnInit } from '@angular/core';
 import {
   Product,
   ProductGeneratorService,
 } from './services/product-generator.service';
-import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   public products: Product[];
   public totalValue: number = 0;
-  public today: string = new Date().toLocaleDateString();
+  public today: string = new Date().toDateString();
   public costOthers: number = 0;
   public costCosmetics: number = 0;
 
